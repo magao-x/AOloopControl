@@ -268,7 +268,22 @@ echo "##########################################"
 stageddir="conf_zrm_staged"
 mkdir -p $stageddir
 cp zrespM.fits $stageddir
+
+if [ -f userScripts/cacao-wfsmap-filt ]; then
+   ./userScripts/cacao-wfsmap-filt
+   cp wfsmap.fits wfsmapUnCorr.fits
+   cp wfsmapCorr.fits wfsmap.fits
+fi
+
 cp wfsmap.fits $stageddir
+
+if [ -f userScripts/cacao-dmmap-filt ]; then
+   ./userScripts/cacao-dmmap-filt
+   cp dmmap.fits dmmapUnCorr.fits
+   cp dmmapCorr.fits dmmap.fits
+fi
+
+
 cp dmmap.fits $stageddir
 
 

@@ -25,7 +25,7 @@ menuitems=()
 menuitems+=( "00.2" "0.2 CPA (Tip/Tilt only)" )
 menuitems+=( "00.3" "0.3 CPA (Tip/Tilt + Focus)" )
 menuitems+=( "00.5" "0.5 CPA (Tip/Tilt + Focus + AST)" )
-for i in `seq 20 40 240 `;
+for i in `seq 20 10 280 `;
         do
 str0=$( echo $i|awk '{printf("%04.1f", $1*0.1)}')
 str1=$( echo $i|awk '{printf("%4.1f CPA", $1*0.1)}')
